@@ -16,3 +16,10 @@ const PORT = 8080
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`)
 })
+// Press "P" to open a custom debug popup
+document.addEventListener("keydown", (e) => {
+  if (e.key.toLowerCase() === "p") {
+    alert("Debug: You pressed P!");
+    // You can replace this with any code you want to run
+  }
+});
