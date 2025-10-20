@@ -23,3 +23,23 @@ document.addEventListener("keydown", (e) => {
     // You can replace this with any code you want to run
   }
 });
+document.addEventListener("keydown", (e) => {
+  if (e.key.toLowerCase() === "p") {
+    let box = document.getElementById("debugBox");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "debugBox";
+      box.style.position = "fixed";
+      box.style.top = "10px";
+      box.style.right = "10px";
+      box.style.background = "rgba(0,0,0,0.8)";
+      box.style.color = "#0f0";
+      box.style.padding = "10px";
+      box.style.borderRadius = "8px";
+      box.innerText = "Debug panel opened!";
+      document.body.appendChild(box);
+    } else {
+      box.remove(); // press P again to close it
+    }
+  }
+});
